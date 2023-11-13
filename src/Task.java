@@ -10,45 +10,51 @@ class Task {
 	private String dueDate;
 	private boolean completed;
 
-    public Task() {
-        //Write your code here
+    public Task()
+	{
+        //TODO;Write your code here
 	}
 	/* 
 	 * Write appropriate comment:
 	 */
-	public Task(String description, String dueDate) {
-        //Write your code here
+	public Task(String description, String dueDate)
+	{
+        //TODO;Write your code here
 	}
 
 	/* 
 	 * Write appropriate comment:
 	 */	
-    public String getDescription() {
-        //Write your code here
+    public String getDescription()
+	{
+        //TODO;Write your code here
         return null;
 	}
 	
 	/* 
 	 * Write appropriate comment:
 	 */
-    public String getDueDate() {
-        //Write your code here
+    public String getDueDate()
+	{
+        //TODO;Write your code here
         return null;
 	}
 
 	/* 
 	 * Write appropriate comment:
 	 */
-	public boolean isCompleted() {
-        //Write your code here
+	public boolean isCompleted()
+	{
+        //TODO;Write your code here
         return false;
 	}
 
 	/* 
 	 * Write appropriate comment:
 	 */
-	public void markCompleted() {
-                //Write your code here
+	public void markCompleted()
+	{
+		//TODO;Write your code here
     }
 
 	/*
@@ -56,8 +62,9 @@ class Task {
 	 * It checks if two tasks are equal by comparing their description, due date, and completion status.
 	 */
 	@Override
-	public boolean equals(Object obj) {
-        //Write your code here
+	public boolean equals(Object obj)
+	{
+        //TODO;Write your code here
         return false;
 	}
     

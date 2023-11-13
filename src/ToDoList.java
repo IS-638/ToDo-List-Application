@@ -7,7 +7,8 @@ import java.util.*;
  * Please implement the provided methods and add appropriate comments for each method.
  *
  */
-class ToDoList {
+class ToDoList
+{
 	private Node head;
 	private int taskCount;
 
@@ -18,11 +19,13 @@ class ToDoList {
 	 * Each node contains a Task object and a reference to the next 
 	 * node in the list.
 	 */
-	private class Node {
+	private class Node
+	{
 		private Task task;
 		private Node next;
 
-		public Node(Task task) {
+		public Node(Task task)
+		{
 			this.task = task;
 			this.next = null;
 		}		
@@ -31,8 +34,9 @@ class ToDoList {
 	/* 
 	 * Write appropriate comment:
 	 */	
-	public void addTask(Task task) {
-        //Write your code here
+	public void addTask(Task task)
+	{
+        //TODO;Write your code here
 
 	}
 
@@ -44,8 +48,9 @@ class ToDoList {
      * Write appropriate comment:
      *
 	 */
-	public void showAllTasks() {
-        //Write your code here
+	public void showAllTasks()
+	{
+        //TODO;Write your code here
 
 	}
 
@@ -57,8 +62,9 @@ class ToDoList {
      * Write appropriate comment:
      *
 	 */
-	public void markTaskAsCompleted(String description) {
-        //Write your code here
+	public void markTaskAsCompleted(String description)
+	{
+        //TODO;Write your code here
 
 	}
 	/*
@@ -68,8 +74,9 @@ class ToDoList {
      * 
      * Write appropriate comment:
      */
-	public void filterTasksByStatus(boolean completed) {
-        //Write your code here
+	public void filterTasksByStatus(boolean completed)
+	{
+        //TODO;Write your code here
 
 	}
 
@@ -80,8 +87,9 @@ class ToDoList {
      * Write appropriate comment:
      *
 	 */
-	public Boolean containsTask(Task task1) {
-        //Write your code here
+	public Boolean containsTask(Task task1)
+	{
+        //TODO;Write your code here
         return false;
 	}
     
@@ -89,8 +97,9 @@ class ToDoList {
      * Write appropriate comment:
      *
 	 */
-	public Integer getTasksCount() {
-        //Write your code here
+	public Integer getTasksCount()
+	{
+        //TODO;Write your code here
         return 0;
     }
     
@@ -98,10 +107,9 @@ class ToDoList {
      * Write appropriate comment:
      *
 	 */
-	public void sortTasks(String sortBy) {
-        //Write your code here
+	public void sortTasks(String sortBy)
+	{
+        //TODO;Write your code here
     }
-    
-
 }
 
