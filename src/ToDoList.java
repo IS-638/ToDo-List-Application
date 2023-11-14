@@ -75,17 +75,26 @@ class ToDoList
 	 * Note: You must use the provided toString() method of the Task class to format the task details correctly.
      * 
      * Write appropriate comment:
-     *
+     * This method will traverse through the to-do list by looking at the current
+     * node and checking if it is empty or not. If the current node is empty then no
+     * task should be displayed otherwise display the current task and update the current
+     * task to point to the next task.
 	 */
 	public void showAllTasks()
 	{
+		// ensure the list isn't empty
 		if (head != null)
 		{
-			Node current = head;
-			while (current != null)
+			Node currentTaskNode = head;
+
+			/* traverse through the list as long as the current node
+			* isn't the last node */
+			while (currentTaskNode != null)
 			{
-				System.out.println(current.task.toString());
-				current = current.next;
+				// print each task
+				System.out.println(currentTaskNode.task.toString());
+				// update the current node to point to the next node
+				currentTaskNode = currentTaskNode.next;
 			}
 		}
 		else
