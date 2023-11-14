@@ -9,6 +9,7 @@ import java.util.*;
  */
 class ToDoList
 {
+	// entry to linked list
 	private Node head;
 	private int taskCount;
 
@@ -33,11 +34,39 @@ class ToDoList
 
 	/* 
 	 * Write appropriate comment:
+	 *
+	 * This method traverses through the to-do list to find the last task and
+	 * add the new task at the end of the list.
+	 * If the list is empty (head points to null) then assign the new task as
+	 * the first task.
 	 */	
 	public void addTask(Task task)
 	{
-        //TODO;Write your code here
+		// assign the passed task as an argument to a new node
+		Node newTaskNode = new Node(task);
 
+		// check that there is a task in the list
+		if (head != null)
+		{
+			// temporary store the first node
+			Node currentTaskNode = head;
+
+			/* keep traversing through the list as long as the next node
+			* is not empty/null */
+			while (currentTaskNode.next != null)
+				/* update the current task to point to the next task in the list */
+				currentTaskNode = currentTaskNode.next;
+
+			/* insert the new task at the end of the list when the loop finds the
+			* last node in the list */
+			currentTaskNode.next = newTaskNode;
+		}
+		else
+			/* if the list is empty then assign the new task to the head
+			* of the list so that the head points to the first node in the list */
+			head = newTaskNode;
+		// keep count of tasks
+		taskCount++;
 	}
 
 	/*
@@ -50,8 +79,17 @@ class ToDoList
 	 */
 	public void showAllTasks()
 	{
-        //TODO;Write your code here
-
+		if (head != null)
+		{
+			Node current = head;
+			while (current != null)
+			{
+				System.out.println(current.task.toString());
+				current = current.next;
+			}
+		}
+		else
+			System.out.println("No tasks found");
 	}
 
 	/*
@@ -64,7 +102,7 @@ class ToDoList
 	 */
 	public void markTaskAsCompleted(String description)
 	{
-        //TODO;Write your code here
+		//TODO;Write your code here
 
 	}
 	/*
@@ -95,12 +133,12 @@ class ToDoList
     
 	/*
      * Write appropriate comment:
-     *
+     * returns the total task count
 	 */
 	public Integer getTasksCount()
 	{
         //TODO;Write your code here
-        return 0;
+        return this.taskCount;
     }
     
     /*

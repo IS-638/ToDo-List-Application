@@ -15,20 +15,24 @@ import java.util.Scanner;
  */
 //Your program will be evaluated by this class and several test cases.
 
-public class ToDoListApp {
+public class ToDoListApp
+{
 	private static ToDoList toDoList = new ToDoList();
 
 
-	public static void start() {
+	public static void start()
+	{
 		Scanner scanner = new Scanner(System.in);
 
 		int iteration = scanner.nextInt();
 		//scanner.nextLine();  // Consume newline
 		int option;
-		if(iteration == 1) {
+		if(iteration == 1)
+		{
 			option = scanner.nextInt();
 		    //scanner.nextLine();  // Consume newline
-			switch (option) {
+			switch (option)
+			{
 			case 1:
                 scanner.nextLine();    
 				addTask(scanner);
@@ -58,10 +62,12 @@ public class ToDoListApp {
 				System.out.println("Invalid option");
 				break;
 			}
-		}else {
+		}else
+		{
 			option = scanner.nextInt();
 			//scanner.nextLine();  // Consume newline
-			switch (option) {
+			switch (option)
+			{
 			case 1:
                 scanner.nextLine();
 				addTask2(scanner);
@@ -106,25 +112,29 @@ public class ToDoListApp {
 		scanner.close();
 	}
 
-	private static void totalNumberOfTasks() {
+	private static void totalNumberOfTasks()
+	{
 		System.out.println(toDoList.getTasksCount());
 		
 	}
 
-	private static void addTask(Scanner scanner) {
+	private static void addTask(Scanner scanner)
+	{
 		String description = scanner.nextLine();
 		String dueDate = scanner.nextLine();
 		Task task = new Task(description, dueDate);
 		toDoList.addTask(task);
 	}
 
-	private static void addTask2(Scanner scanner) {
+	private static void addTask2(Scanner scanner)
+	{
 		int taskTypeChoice = scanner.nextInt();
 		scanner.nextLine();  // Consume newline
 		String description = scanner.nextLine();
 		String dueDate = scanner.nextLine();
 		Task task = null;
-		switch (taskTypeChoice) {
+		switch (taskTypeChoice)
+		{
 		case 1:
 			String reminderDate = scanner.nextLine();
 			task = new PersonalTask(description, dueDate, reminderDate);
@@ -143,13 +153,16 @@ public class ToDoListApp {
 			break;
 		}
 
-		if (task != null) {
+		if (task != null)
+		{
 			toDoList.addTask(task);
 		}		
 	}
 
-	private static void addTasks(Scanner scanner, int count) {
-		do{
+	private static void addTasks(Scanner scanner, int count)
+	{
+		do
+		{
 			addTask(scanner);
 			count--;
 		}while(count > 0);
@@ -159,16 +172,19 @@ public class ToDoListApp {
 		toDoList.showAllTasks();
 	}
 
-	private static void markTaskAsCompleted(Scanner scanner) {
+	private static void markTaskAsCompleted(Scanner scanner)
+	{
 		String description = scanner.nextLine();
 		toDoList.markTaskAsCompleted(description);
 	
 	}
-	private static void filterTasksByStatus(Scanner scanner) {
+	private static void filterTasksByStatus(Scanner scanner)
+	{
 		int option = scanner.nextInt();
 	//	scanner.nextLine();  // Consume newline
 
-		switch (option) {
+		switch (option)
+		{
 		case 1:
 			toDoList.filterTasksByStatus(true);
 			break;
@@ -181,19 +197,22 @@ public class ToDoListApp {
 		}
 	}
 	
-	public static void sortTasks(Scanner scanner) {
+	public static void sortTasks(Scanner scanner)
+	{
         String sortBy = scanner.nextLine();//dueDate or description
         toDoList.sortTasks(sortBy);
 	}
 
-	private static void loadDefaultTasks() {
+	private static void loadDefaultTasks()
+	{
 		Task task1 = new Task("Finish report", "2022-12-31");
 		Task task2 = new Task("Submit assignment", "2022-11-30");
 		toDoList.addTask(task1);
 		toDoList.addTask(task2);
 	}
 	
-	private static void loadDefaultTasks2() {
+	private static void loadDefaultTasks2()
+	{
 		Task task1 = new PersonalTask("Birthday Party", "2023-10-25", "2023-10-25");
 		Task task2 = new WorkTask("Project Deadline", "2022-11-30", 3);
 		Task task3 = new ShoppingTask("Grocery Shopping", "2023-10-28", "Apples, Bananas, Milk");

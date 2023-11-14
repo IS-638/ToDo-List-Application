@@ -1,52 +1,69 @@
+/*
+Isaac Do
+CS2336.001
+ */
+
 import java.util.*;
+
 /**
  * This `Task` class represents a task with a description, due date, 
  * and completion status. 
  * Please implement the provided methods and add appropriate comments for each method.
  */
 
-class Task {
+class Task
+{
 	private String description;
 	private String dueDate;
 	private boolean completed;
 
+	/* default constructor */
     public Task()
 	{
-        //TODO;Write your code here
-	}
-	/* 
-	 * Write appropriate comment:
-	 */
-	public Task(String description, String dueDate)
-	{
-        //TODO;Write your code here
+		this.description = "";
+		this.dueDate = "";
+		this.completed = false;
 	}
 
 	/* 
 	 * Write appropriate comment:
+	 *
+	 * parameterized constructor
+	 */
+	public Task(String description, String dueDate)
+	{
+		this.description = description;
+		this.dueDate = dueDate;
+	}
+
+	/* 
+	 * Write appropriate comment:
+	 *
+	 * returns the description
 	 */	
     public String getDescription()
 	{
-        //TODO;Write your code here
-        return null;
+        return this.description;
 	}
 	
 	/* 
 	 * Write appropriate comment:
+	 *
+	 * returns the due date
 	 */
     public String getDueDate()
 	{
-        //TODO;Write your code here
-        return null;
+        return this.dueDate;
 	}
 
-	/* 
+	/*
 	 * Write appropriate comment:
+	 *
+	 * returns if task is completed or not
 	 */
 	public boolean isCompleted()
 	{
-        //TODO;Write your code here
-        return false;
+        return this.completed;
 	}
 
 	/* 
