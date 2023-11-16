@@ -75,6 +75,7 @@ class ToDoList
 	 * Note: You must use the provided toString() method of the Task class to format the task details correctly.
      * 
      * Write appropriate comment:
+     *
      * This method will traverse through the to-do list by looking at the current
      * node and checking if it is empty or not. If the current node is empty then no
      * task should be displayed otherwise display the current task and update the current
@@ -142,11 +143,34 @@ class ToDoList
 	 * Note: You must use the provided toString() method of the Task class to format the task details correctly.
      * 
      * Write appropriate comment:
+     *
+     * Traverse through the list and check each node based on given filter. If we are filtering for completed
+     * tasks, ensure that the current task is marked completed then print.
+     *
      */
 	public void filterTasksByStatus(boolean completed)
 	{
-        //TODO;Write your code here
+		Node currentTaskNode = head;
 
+		while (currentTaskNode != null)
+		{
+			/* our filter is for completed task, and we must ensure the task is completed */
+			if (completed && currentTaskNode.task.isCompleted())
+				System.out.println(currentTaskNode.task.toString());
+			/* we are filtering anything not completed */
+			else if (!completed)
+				System.out.println(currentTaskNode.task.toString());
+			else
+			{
+				System.out.println("No tasks found");
+
+				/* exit the loop if none found */
+				return;
+			}
+
+			/* update the current node */
+			currentTaskNode = currentTaskNode.next;
+		}
 	}
 
 	/*
