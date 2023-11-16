@@ -108,12 +108,34 @@ class ToDoList
      * 
      * Write appropriate comment:
      *
+     * This method will traverse through the list like usual, but we will compare the current
+     * task description with a given description for a match. If the description match then print
+     * "Task marked as completed" and mark the task completed then exit the loop. If there is no match,
+     * keep updating the current node and continue traversing through the list until a match or the loop
+     * reaches the end of the list.
+     *
 	 */
 	public void markTaskAsCompleted(String description)
 	{
-		//TODO;Write your code here
+		Node currentTaskNode = head;
 
+		while (currentTaskNode != null)
+		{
+			/* check for a match in the description */
+			if (currentTaskNode.task.getDescription().equals(description))
+			{
+				System.out.println("Task marked as completed");
+
+				/* mark the task completed */
+				currentTaskNode.task.markCompleted();
+				return;
+			}
+			/* point to the next node if description does not match */
+			currentTaskNode = currentTaskNode.next;
+		}
+		System.out.println("Task not found");
 	}
+
 	/*
 	 * This method filters the tasks based on their completion status. 
      * If a match is not found it will print "No tasks found". 

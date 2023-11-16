@@ -71,7 +71,7 @@ class Task
 	 */
 	public void markCompleted()
 	{
-		//TODO;Write your code here
+		this.completed = true;
     }
 
 	/*
@@ -81,8 +81,11 @@ class Task
 	@Override
 	public boolean equals(Object obj)
 	{
-        //TODO;Write your code here
-        return false;
+        Task task = (Task)obj;
+
+		return completed == task.completed &&
+				description.equals(task.description) &&
+				dueDate.equals(task.dueDate);
 	}
     
     
