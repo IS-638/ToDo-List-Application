@@ -104,13 +104,32 @@ class Task
 	}
 
 }
-class PersonalTask extends Task{
-	PersonalTask(String description, String dueDate, String reminderDate){}
+class PersonalTask extends Task
+{
+	private String reminderDate;
+
+	PersonalTask(String description, String dueDate, String reminderDate)
+	{
+		super(description, dueDate);
+		this.reminderDate = reminderDate;
+	}
 }
-class WorkTask extends Task{
-    WorkTask(String description, String dueDate, int priorityLevel){}
+class WorkTask extends Task
+{
+	private int priorityLevel;
+    WorkTask(String description, String dueDate, int priorityLevel)
+	{
+		super(description, dueDate);
+		this.priorityLevel = priorityLevel;
+	}
 }
-class ShoppingTask extends Task{
-    ShoppingTask(String description, String dueDate, String shoppingList){}
+class ShoppingTask extends Task
+{
+	private String shoppingList;
+    ShoppingTask(String description, String dueDate, String shoppingList)
+	{
+		super(description, dueDate);
+		this.shoppingList = shoppingList;
+	}
 }
 
