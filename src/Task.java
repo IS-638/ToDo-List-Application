@@ -11,7 +11,7 @@ import java.util.*;
  * Please implement the provided methods and add appropriate comments for each method.
  */
 
-class Task
+class Task implements Comparable<Task>
 {
 	private String description;
 	private String dueDate;
@@ -103,6 +103,12 @@ class Task
 				"\n";
 	}
 
+	/* compares two tasks and their due dates */
+	@Override
+	public int compareTo(Task otherTask)
+	{
+		return this.dueDate.compareTo(otherTask.dueDate);
+	}
 }
 class PersonalTask extends Task
 {
@@ -113,23 +119,41 @@ class PersonalTask extends Task
 		super(description, dueDate);
 		this.reminderDate = reminderDate;
 	}
+
+	/* override toString method */
+	public String toString()
+	{
+		return super.toString() + "Reminder Date: " + this.reminderDate;
+	}
 }
 class WorkTask extends Task
 {
 	private int priorityLevel;
+
     WorkTask(String description, String dueDate, int priorityLevel)
 	{
 		super(description, dueDate);
 		this.priorityLevel = priorityLevel;
 	}
+
+	public String toString()
+	{
+		return super.toString() + "Priority Level: " + this.priorityLevel;
+	}
 }
 class ShoppingTask extends Task
 {
 	private String shoppingList;
+
     ShoppingTask(String description, String dueDate, String shoppingList)
 	{
 		super(description, dueDate);
 		this.shoppingList = shoppingList;
+	}
+
+	public String toString()
+	{
+		return super.toString() + "Shopping List: " + this.shoppingList;
 	}
 }
 

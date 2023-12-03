@@ -182,8 +182,16 @@ class ToDoList
 	 */
 	public Boolean containsTask(Task task1)
 	{
-        //TODO;Write your code here
-        return false;
+		Node current = head;
+		while (current != null)
+		{
+			if (current.task.equals(task1))
+			{
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
 	}
     
 	/*
@@ -192,8 +200,7 @@ class ToDoList
 	 */
 	public Integer getTasksCount()
 	{
-        //TODO;Write your code here
-        return this.taskCount;
+		return this.taskCount;
     }
     
     /*
@@ -202,7 +209,7 @@ class ToDoList
 	 */
 	public void sortTasks(String sortBy)
 	{
-        //TODO;Write your code here
+
     }
 }
 
