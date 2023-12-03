@@ -123,7 +123,7 @@ class PersonalTask extends Task
 	/* override toString method */
 	public String toString()
 	{
-		return super.toString() + "Reminder Date: " + this.reminderDate;
+		return super.toString() + "Reminder Date: " + this.reminderDate + "\n";
 	}
 }
 class WorkTask extends Task
@@ -138,7 +138,7 @@ class WorkTask extends Task
 
 	public String toString()
 	{
-		return super.toString() + "Priority Level: " + this.priorityLevel;
+		return super.toString() + "Priority Level: " + this.priorityLevel + "\n";
 	}
 }
 class ShoppingTask extends Task
@@ -153,7 +153,7 @@ class ShoppingTask extends Task
 
 	public String toString()
 	{
-		return super.toString() + "Shopping List: " + this.shoppingList;
+		return super.toString() + "Shopping List: " + this.shoppingList + "\n";
 	}
 }
 

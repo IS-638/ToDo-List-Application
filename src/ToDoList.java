@@ -179,23 +179,26 @@ class ToDoList
      * 
      * Write appropriate comment:
      *
+     * This method traverses through the list and compare each node in the list to the given task. If a match, then
+     * we found the task in the list, otherwise the task does not exist in the list.
 	 */
 	public Boolean containsTask(Task task1)
 	{
-		Node current = head;
-		while (current != null)
+		Node currentTaskNode = head;
+
+		while (currentTaskNode != null)
 		{
-			if (current.task.equals(task1))
-			{
+			if (currentTaskNode.task.equals(task1))
 				return true;
-			}
-			current = current.next;
+
+			currentTaskNode = currentTaskNode.next;
 		}
 		return false;
 	}
     
 	/*
      * Write appropriate comment:
+     *
      * returns the total task count
 	 */
 	public Integer getTasksCount()
@@ -206,10 +209,44 @@ class ToDoList
     /*
      * Write appropriate comment:
      *
+     * This method utilizes the bubble sorting algorithm. We're traversing through the list to find the largest element
+     * (or in our case, sorting the list in ascending order) and placing it in the correct position. We'll be using the
+     * overridden compareTo method in the Task class to compare two tasks due dates, and we'll use the compareTo method from
+     * String to compare the descriptions. If we find an element out of place, we'll perform a swap operation and update the list accordingly.
 	 */
 	public void sortTasks(String sortBy)
 	{
+		/* controls whether elements are swapped */
+		boolean hasSwapped;
 
-    }
+		/* bubble sort */
+		for (int i = 0; i < taskCount - 1; i++)
+		{
+			hasSwapped = false;
+			Node currentTaskNode = head;
+
+			for (int j = 0; j < taskCount - i - 1; j++)
+			{
+				/* use the overridden compareTo method in Task class if sorting by dueDate, otherwise if sorting by description
+				* then compare it directly */
+				boolean isSwappable = sortBy.equals("dueDate") ?
+						currentTaskNode.task.compareTo(currentTaskNode.next.task) > 0 :
+						currentTaskNode.task.getDescription().compareTo(currentTaskNode.next.task.getDescription()) > 0;
+
+				/* perform swap operation */
+				if (isSwappable)
+				{
+					Task tempNode = currentTaskNode.task;
+					currentTaskNode.task = currentTaskNode.next.task;
+					currentTaskNode.next.task = tempNode;
+					hasSwapped = true;
+				}
+				currentTaskNode = currentTaskNode.next;
+			}
+			/* list is already sorted */
+			if (!hasSwapped)
+				break;
+		}
+	}
 }
 
