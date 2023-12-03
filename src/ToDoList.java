@@ -1,4 +1,21 @@
+/*
+Isaac Do
+CS2336.001
+ */
+
 import java.util.*;
+
+/* Analysis
+We must create a To do list application where a user can perform
+various tasks. We must implement this using linked lists where each node
+in the list represents the task itself.
+*/
+
+/* Design
+To implement the functions of these tasks we can use a linked list to store
+each tasks into a node in the list. Then when we are performing a task we can traverse
+through the list and execute the necessary function.
+*/
 
 /**
  * @author mehra
