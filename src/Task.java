@@ -87,9 +87,7 @@ class Task implements Comparable<Task>
 				description.equals(task.description) &&
 				dueDate.equals(task.dueDate);
 	}
-    
-    
-//********************************************************* DO NOT CHANGE ***************************************************//
+
 	/*
 	 * This method overrides the `toString` method from the `Object` class. 
 	 * It returns a string representation of the task, including its description, due date, and completion status.

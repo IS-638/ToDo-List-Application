@@ -1,4 +1,3 @@
-//*************************************Do Not Change This Class
 public class DriverMain
 {
 	public static void main(String[] args)
@@ -6,4 +5,3 @@ public class DriverMain
 		ToDoListApp.start();
 	}
 }
-//*************************************Do Not Change This Class

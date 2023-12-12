@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-//*********************************************Solution
+
 /*
- * @author mehra
  * This program uses a linked list implementation to store the tasks in the ToDo List. 
  * The `Task` class represents a task and has fields for description, due date, and status. 
  * The `ToDoList` class contains methods for adding tasks, showing all tasks, marking tasks 
@@ -13,7 +12,6 @@ import java.util.Scanner;
  * This will allow you to add a task, load default tasks, show all tasks, mark a task as 
  * completed, filter tasks by status. Simply provide the required information to perform the desired operation.
  */
-//Your program will be evaluated by this class and several test cases.
 
 public class ToDoListApp
 {

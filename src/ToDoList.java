@@ -30,8 +30,7 @@ class ToDoList
 	private Node head;
 	private int taskCount;
 
-	/* 
-     * @author mehra
+	/*
      * The class has a private inner class named Node, which represents 
 	 * a node in the linked list. 
 	 * Each node contains a Task object and a reference to the next 
@@ -49,9 +48,7 @@ class ToDoList
 		}		
 	}
 
-	/* 
-	 * Write appropriate comment:
-	 *
+	/*
 	 * This method traverses through the to-do list to find the last task and
 	 * add the new task at the end of the list.
 	 * If the list is empty (head points to null) then assign the new task as
