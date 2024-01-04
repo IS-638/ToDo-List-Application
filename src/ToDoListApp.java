@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 /*
  * This program uses a linked list implementation to store the tasks in the ToDo List. 
  * The `Task` class represents a task and has fields for description, due date, and status. 

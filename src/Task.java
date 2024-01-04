@@ -1,14 +1,8 @@
-/*
-Isaac Do
-CS2336.001
- */
-
 import java.util.*;
 
 /**
  * This `Task` class represents a task with a description, due date, 
- * and completion status. 
- * Please implement the provided methods and add appropriate comments for each method.
+ * and completion status.
  */
 
 class Task implements Comparable<Task>
@@ -25,20 +19,14 @@ class Task implements Comparable<Task>
 		this.completed = false;
 	}
 
-	/* 
-	 * Write appropriate comment:
-	 *
-	 * parameterized constructor
-	 */
+	/* parameterized constructor */
 	public Task(String description, String dueDate)
 	{
 		this.description = description;
 		this.dueDate = dueDate;
 	}
 
-	/* 
-	 * Write appropriate comment:
-	 *
+	/*
 	 * returns the description
 	 */	
     public String getDescription()
@@ -46,29 +34,19 @@ class Task implements Comparable<Task>
         return this.description;
 	}
 	
-	/* 
-	 * Write appropriate comment:
-	 *
-	 * returns the due date
-	 */
+	/* returns the due date */
     public String getDueDate()
 	{
         return this.dueDate;
 	}
 
-	/*
-	 * Write appropriate comment:
-	 *
-	 * returns if task is completed or not
-	 */
+	/* returns if task is completed or not */
 	public boolean isCompleted()
 	{
         return this.completed;
 	}
 
-	/* 
-	 * Write appropriate comment:
-	 */
+	/* mark task completion */
 	public void markCompleted()
 	{
 		this.completed = true;
@@ -91,7 +69,6 @@ class Task implements Comparable<Task>
 	/*
 	 * This method overrides the `toString` method from the `Object` class. 
 	 * It returns a string representation of the task, including its description, due date, and completion status.
-     * 
 	 */
 	@Override
 	public String toString() {
