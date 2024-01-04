@@ -202,17 +202,17 @@ public class ToDoListApp
 
 	private static void loadDefaultTasks()
 	{
-		Task task1 = new Task("Finish report", "2022-12-31");
-		Task task2 = new Task("Submit assignment", "2022-11-30");
+		Task task1 = new Task("Finish project", "2021-11-25");
+		Task task2 = new Task("Submit assignment", "2022-12-03");
 		toDoList.addTask(task1);
 		toDoList.addTask(task2);
 	}
 	
 	private static void loadDefaultTasks2()
 	{
-		Task task1 = new PersonalTask("Birthday Party", "2023-10-25", "2023-10-25");
-		Task task2 = new WorkTask("Project Deadline", "2022-11-30", 3);
-		Task task3 = new ShoppingTask("Grocery Shopping", "2023-10-28", "Apples, Bananas, Milk");
+		Task task1 = new PersonalTask("Movie Showtime", "2024-01-22", "2024-01-20");
+		Task task2 = new WorkTask("Project Deadline", "2020-12-12", 4);
+		Task task3 = new ShoppingTask("Grocery Shopping", "2023-05-14", "Bread, Butter, Milk");
 		toDoList.addTask(task1);
 		toDoList.addTask(task2);
 		toDoList.addTask(task3);
